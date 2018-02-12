@@ -1,4 +1,4 @@
-package pa03;
+package pa03team17;
 import java.awt.*;
 
 /**
@@ -13,11 +13,11 @@ public class RichardCircle extends CircleShape{
 	/**
 	 * create a radius changing circle and set the color to yellow
 	 */
-  public RadiusChangingCircle(){
+/**  public RadiusChangingCircle(){
     super();
 		this.color = new java.awt.Color(0,0,255,100); // transparent blue
   }
-
+*/
   public void draw(Graphics g){
     int x = frameNumber;
     int y = 500-frameNumber;

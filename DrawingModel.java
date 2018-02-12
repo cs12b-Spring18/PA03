@@ -1,4 +1,4 @@
-package pa03;
+package pa03team17;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -12,10 +12,13 @@ public class DrawingModel {
 	private CircleShape[] circles;
 	private AngelCircle[] AngelCircle;
 	private LyannaCircle[] LyannaCircle;
-	private RichardCircle[] RichardCircle;
+	//private RichardCircle[] RichardCircle;
 	private Karrina[] Karrina;
 	private int numCircles=0;
 	private int numAngelCircle=0;
+	private int numLyannaCircle=0;
+	private int numRichardCircle=0;
+	private int numKarrina=0;
 	private double speed = 0.02;
 
 
@@ -26,7 +29,7 @@ public class DrawingModel {
 		circles = new CircleShape[n];
 		AngelCircle = new AngelCircle[n];
 		LyannaCircle = new LyannaCircle[n];
-		RichardCircle = new RichardCircle[n];
+		//RichardCircle = new RichardCircle[n];
 		Karrina = new Karrina[n];
 		this.init();
 	}
@@ -49,10 +52,10 @@ public class DrawingModel {
 
 			c = new LyannaCircle();
 			this.add(c);
-
+/**
 			c = new RichardCircle();
 			this.add(c);
-
+*/
 			c = new Karrina();
 			this.add(c);
 		}
@@ -76,12 +79,12 @@ public class DrawingModel {
 		circles[numLyannaCircle]=c;
 		numLyannaCircle++;
 	}
-
+/**
 	private void add(RichardCircle c){
 		circles[numRichardCircle]=c;
 		numRichardCircle++;
 	}
-
+*/
 	private void add(Karrina c){
 		circles[numKarrina]=c;
 		numKarrina++;
@@ -109,12 +112,12 @@ public class DrawingModel {
 			LyannaCircle a = LyannaCircle[i];
 			a.draw(g);
 		}
-
+/**
 		for(int i=0; i<numRichardCircle; i++){
 			RichardCircle a = RichardCircle[i];
 			a.draw(g);
 		}
-
+*/
 		for(int i=0; i<numKarrina; i++){
 			Karrina a = Karrina[i];
 			a.draw(g);
@@ -134,9 +137,9 @@ public class DrawingModel {
 		for(int i=0; i<numLyannaCircle; i++){
 			LyannaCircle[i].update(speed);
 		}
-		for(int i=0; i<numRichardCircle; i++){
+/**		for(int i=0; i<numRichardCircle; i++){
 			RichardCircle[i].update(speed);
-		}
+		}*/
 		for(int i=0; i<numKarrina; i++){
 			Karrina[i].update(speed);
 		}

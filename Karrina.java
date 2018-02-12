@@ -16,7 +16,7 @@ public class Karrina extends CircleShape{
 	 */
 
   public Karrina(){
-    //super();
+    super();
 		this.color = new java.awt.Color(255,0,255,255); // transparent blue
   }
 

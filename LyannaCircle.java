@@ -3,7 +3,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 /**
- * LyannaCircles are yellow circles which move at a constant velocity
+ * LyannaCircles are light blue circles which move at a constant velocity
  * on the board and bounce off the edges, but whose radius grows and shrinks.
 */
 public class LyannaCircle extends CircleShape{
@@ -55,7 +55,7 @@ public class LyannaCircle extends CircleShape{
     else if (this.vx>5) this.vr *=-1;
     if (this.vy > 5) this.sr *= 1;
     else if (this.vy<5) this.sr *=-1;
-		super.update(dt);
+    super.update(dt);
 
   }
 

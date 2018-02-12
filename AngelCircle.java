@@ -64,7 +64,7 @@ public class AngelCircle extends CircleShape{
   public void update(double dt){
     // change the properties of the CircleShape after dt seconds have elapsed.
 
-		this.radius += dt*vr;
+		this.radius += 2.5*dt*vr;
 
     if  (this.radius <5) this.vr *= -1;
     else if (this.radius > 60) this.vr *= -1;

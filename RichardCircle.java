@@ -1,4 +1,4 @@
-package circleshape;
+package pa03team17;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -18,7 +18,7 @@ public class RichardCircle extends CircleShape{
 	 */
   public RichardCircle(){
     super();      //the constructor of the circle shape.
-		this.color = new java.awt.Color(255,255,255,255); // transparent blue
+		this.color = new java.awt.Color(88,214,141,150); // transparent blue
   }       //changes the color
 
 
@@ -38,9 +38,9 @@ public class RichardCircle extends CircleShape{
     int v = (int)(250-0.5*y);
     int w = x;
     int h = y;
-    g.setColor( Color.GREEN );
+    g.setColor( color );
     g.fillOval( u,v,w,h );
-    g.setColor( Color.GREEN );
+    g.setColor( color );
     g.drawOval( u,v,w,h );
   }
 

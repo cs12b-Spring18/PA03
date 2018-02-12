@@ -6,7 +6,7 @@ import java.awt.Graphics;
 
 public class AngelCircle extends CircleShape{
 
-  private double vr=2.0;
+  private double vr=4.0;
   private Color borderColor;
 
 
@@ -15,17 +15,17 @@ public class AngelCircle extends CircleShape{
 	 * create a radius changing circle and set the color to yellow
 	 */
   public AngelCircle(){
-
-		this.color = new Color(255,160,122,100); // transparent blue
+    super();
+		this.color = new Color(255,160,122,80); // transparent blue
     this.borderColor = new Color(255,160,122,100);
   }
 
 
 
   public void draw( Graphics g ) {
-      int u = (int)(radius*2);
-      int v = (int)(radius*2);
-      int w = (int)x;
+      int u = (int)(radius*6);
+      int v = (int)(radius*6);
+      int w = (int)(2*radius);
       int h = w;
       g.setColor( color );
       g.fillOval(u,v,w,h );
@@ -53,7 +53,7 @@ public class AngelCircle extends CircleShape{
     } else if (this.y > CircleShape.boardHeight-this.radius) {
       // it went below the bottom edge!
       this.vy = -this.vx;
-      this.y = (AngelCircle.boardHeight-250)-this.radius;
+      this.y = (AngelCircle.boardHeight+250)-this.radius;
     }
   }
 

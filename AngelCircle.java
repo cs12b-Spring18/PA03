@@ -12,11 +12,11 @@ public class AngelCircle extends CircleShape{
 
 
 	/**
-	 * create a radius changing circle and set the color to yellow
+	 * create a radius changing circle and set the color to pink
 	 */
   public AngelCircle(){
     super();
-		this.color = new Color(255,160,122,80); // transparent blue
+		this.color = new Color(255,160,122,80);
     this.borderColor = new Color(255,160,122,100);
   }
 
@@ -35,44 +35,33 @@ public class AngelCircle extends CircleShape{
 
   public void keepOnBoard(){
     if (this.x < this.radius) {
-      // it went off the left edge! do something!
       this.vx = -this.vx;
       this.x = this.radius;
 
     }else if (this.x > (this.radius/2)) {
-      // it went off the right edge! do something!
       this.vx = -this.vx;
       this.x = AngelCircle.boardWidth-this.radius;
     }
 
     if (this.y < this.radius){
-      // it went above the top edge!
       this.vy = this.vx;
       this.y = this.radius;
 
     } else if (this.y > CircleShape.boardHeight-this.radius) {
-      // it went below the bottom edge!
       this.vy = -this.vx;
       this.y = (AngelCircle.boardHeight+250)-this.radius;
     }
   }
 
 	/**
-	 * update the circle as usual, but also change the radius. If it gets too big,
+	 * update the circle and change the radius. If it gets too big,
 	 * then start it shrinking, if it gets too small then start it growing.
 	 */
   public void update(double dt){
-    // change the properties of the CircleShape after dt seconds have elapsed.
-
 		this.radius += 2.5*dt*vr;
-
     if  (this.radius <5) this.vr *= -1;
     else if (this.radius > 60) this.vr *= -1;
 		super.update(dt);
-
   }
-
-
-
 
 }

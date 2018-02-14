@@ -53,10 +53,10 @@ public class DrawingModel {
 			c = new LyannaCircle();
 			this.add(c);
 
-			c = new RichardCircle();
+			c = new Karrina();
 			this.add(c);
 
-			c = new Karrina();
+			c = new RichardCircle();
 			this.add(c);
 		}
 	}
@@ -80,14 +80,14 @@ public class DrawingModel {
 		numLyannaCircle++;
 	}
 
-	private void add(RichardCircle c){
-		circles[numRichardCircle]=c;
-		numRichardCircle++;
-	}
-
 	private void add(Karrina c){
 		circles[numKarrina]=c;
 		numKarrina++;
+	}
+
+	private void add(RichardCircle c){
+		circles[numRichardCircle]=c;
+		numRichardCircle++;
 	}
 
 	/**
@@ -113,13 +113,13 @@ public class DrawingModel {
 			a.draw(g);
 		}
 
-		for(int i=0; i<numRichardCircle; i++){
-			RichardCircle a = RichardCircle[i];
+		for(int i=0; i<numKarrina; i++){
+			Karrina a = Karrina[i];
 			a.draw(g);
 		}
 
-		for(int i=0; i<numKarrina; i++){
-			Karrina a = Karrina[i];
+		for(int i=0; i<numRichardCircle; i++){
+			RichardCircle a = RichardCircle[i];
 			a.draw(g);
 		}
 	}
@@ -137,11 +137,13 @@ public class DrawingModel {
 		for(int i=0; i<numLyannaCircle; i++){
 			LyannaCircle[i].update(speed);
 		}
-		for(int i=0; i<numRichardCircle; i++){
-			RichardCircle[i].update(speed);
-		}
+
 		for(int i=0; i<numKarrina; i++){
 			Karrina[i].update(speed);
+		}
+
+		for(int i=0; i<numRichardCircle; i++){
+			RichardCircle[i].update(speed);
 		}
 	}
 }

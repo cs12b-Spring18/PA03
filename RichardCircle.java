@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 
 /**
- * RadiusChangingCircles are yellow circles which move at a constant velocity
+ * RichardCircle are light green circles which constantly changes its horizontal and vertical radius
  * on the board and bounce off the edges, but whose radius grows and shrinks.
 */
 public class RichardCircle extends CircleShape{
@@ -14,11 +14,11 @@ public class RichardCircle extends CircleShape{
   public int num = 0;
 
 	/**
-	 * create a radius changing circle and set the color to yellow
+	 * create a radius changing circle and set the color to light green
 	 */
   public RichardCircle(){
-    super();      //the constructor of the circle shape.
-		this.color = new java.awt.Color(88,214,141,150); // transparent blue
+    super();
+		this.color = new java.awt.Color(88,214,141,150); // light green
   }       //changes the color
 
 
@@ -36,12 +36,33 @@ public class RichardCircle extends CircleShape{
 
     int u = (int)(250-0.5*x);
     int v = (int)(250-0.5*y);
-    int w = x;
-    int h = y;
+    int a = (int)(350-0.5*x);
+    int b = (int)(350-0.5*y);
+    int w = (int)(0.5*x);
+    int h = (int)(0.5*y);
     g.setColor( color );
     g.fillOval( u,v,w,h );
+
     g.setColor( color );
-    g.drawOval( u,v,w,h );
+    g.fillOval( u,v,h,w );
+
+    g.setColor( color );
+    g.fillOval( v,u,w,h );
+
+    g.setColor( color );
+    g.fillOval( v,u,h,w );
+
+    g.setColor( color );
+    g.fillOval( b,a,w,h );
+
+    g.setColor( color );
+    g.fillOval( a,b,h,w );
+
+    g.setColor( color );
+    g.fillOval( a,b,w,h );
+
+    g.setColor( color );
+    g.fillOval( b,a,h,w );
   }
 
 
